@@ -91,7 +91,7 @@ def play_game():
                     break
                 elif ' ' not in board[0]:
                     print_board(board)
-                    print("🤝 It's a tie!")
+                    print("It's a tie!")
                     break
                 else:
                     current_player = 'O' if current_player == 'X' else 'X'
@@ -102,3 +102,4 @@ def play_game():
 
 
 play_game()
+
