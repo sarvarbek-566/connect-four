@@ -15,7 +15,7 @@ def print_board(board):
         print('_' * 15)
 
 
-def is_valid_move(board, col):  # movie → move
+def is_valid_move(board, col): 
     if col < 0 or col >= 7:
         return False
     return board[0][col] == ' '
@@ -30,7 +30,6 @@ def make_move(board, col, player):
 
 
 def check_winner(board, player):
-    # Horizontal
     for row in range(6):
         for col in range(4):
             if board[row][col] == player and \
@@ -38,8 +37,7 @@ def check_winner(board, player):
                board[row][col+2] == player and \
                board[row][col+3] == player:
                 return True
-
-    # Vertical
+                   
     for row in range(3):
         for col in range(7):
             if board[row][col] == player and \
@@ -48,7 +46,6 @@ def check_winner(board, player):
                board[row+3][col] == player:
                 return True
 
-    # Diagonal right-down
     for row in range(3):
         for col in range(4):
             if board[row][col] == player and \
@@ -57,7 +54,6 @@ def check_winner(board, player):
                board[row+3][col+3] == player:
                 return True
 
-    # Diagonal left-down
     for row in range(3):
         for col in range(3, 7):
             if board[row][col] == player and \
@@ -76,7 +72,6 @@ def play_game():
     while True:
         print_board(board)
 
-        # Inputni to‘g‘ri olish
         try:
             col = int(input(f'Player {current_player}, enter a column number (0-6): '))
         except ValueError:
@@ -102,4 +97,5 @@ def play_game():
 
 
 play_game()
+
 
