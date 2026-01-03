@@ -91,11 +91,12 @@ def play_game():
                 else:
                     current_player = 'O' if current_player == 'X' else 'X'
             else:
-                print("Bu ustun tola. Boshqasini tanla.")
+                print("bu ustun tola boshqasini tanla")
         else:
-            print("Notogri ustun tanlandi. Qaytadan urinib koring.")
+            print("notogri ustun tanlandi qaytadan urinib koring")
 
 
 play_game()
+
 
 
